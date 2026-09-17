@@ -51,7 +51,7 @@ flowchart TD
         GHMain[Remote 'main' Branch]
     end
 
-    subgraph Jenkins CI Server: http://34.254.6.118:8080
+    subgraph Jenkins CI Server: http://52.31.15.176:8080
         Webhook -->|HTTP POST payload| JServer[Jenkins Controller]
         JServer -->|Trigger Build| Job1["Job 1: oanzia-job1-ci-test"]
         
@@ -125,7 +125,7 @@ The matching private key was stored securely in the Jenkins Global Credentials s
 The GitHub Webhook bridges code pushes to Jenkins build triggers:
 
 * **Repository:** `https://github.com/oanzia99/pre-tech613-sparta-app-cicd-jenkins`
-* **Webhook URL:** `http://34.254.6.118:8080/github-webhook/`
+* **Webhook URL:** `http://52.31.15.176:8080/github-webhook/`
 * **Payload Type:** `application/json`
 * **Event Trigger:** `Just the push event`
 * **Status:** `Active` (Sends an automated HTTP POST payload to Jenkins on every push to any branch).
@@ -181,7 +181,7 @@ Developer executes:
         │
         ▼
 [Step 2: Webhook Trigger]
-GitHub dispatches POST to http://34.254.6.118:8080/github-webhook/
+GitHub dispatches POST to http://52.31.15.176:8080/github-webhook/
         │
         ▼
 [Step 3: Job 1 Execution (oanzia-job1-ci-test #1)]
@@ -304,7 +304,7 @@ flowchart TD
 ```
 
 1. **Plugin Updates:**
-   * Navigate to **Manage Jenkins > Plugins > Updates** (`http://34.254.6.118:8080/pluginManager`).
+   * Navigate to **Manage Jenkins > Plugins > Updates** (`http://52.31.15.176:8080/pluginManager`).
    * Select the vulnerable plugins (`Credentials`, `Git Client`, `GitHub Plugin`, `Script Security`).
    * Click **Download now and install after restart**.
 2. **Core Upgrade:**
