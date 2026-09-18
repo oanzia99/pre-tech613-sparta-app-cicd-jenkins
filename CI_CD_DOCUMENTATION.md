@@ -388,6 +388,12 @@ Finished: SUCCESS
 
 ### GitHub Remote Branch Verification
 
+#### 1. Remote Branch Synchronization Evidence
+![GitHub Successful Merge Evidence](images/github-successful-merge.png)
+
+*The GitHub repository overview displays the `main` branch reflecting the latest automated merge commit pushed by Jenkins (`Git Publisher`), confirming zero manual intervention.*
+
+#### 2. Git Commit Log Graph Verification
 To verify that the merge completed successfully on the remote repository without manual interaction:
 
 ```bash
